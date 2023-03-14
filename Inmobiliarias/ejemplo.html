@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            table, table *{
+                border: solid black;
+            }
+            thead {
+                background-color:orange;
+            }
+            tbody tr:nth-child(odd){ /* impares */
+                background-color: violet;
+            }
+            tbody tr:nth-child(even) { /* pares */
+                background-color: yellowgreen;
+            }
+        </style>
+</head>
+<body>
+    
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Nombre</td>
+                <td>Apellidos</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Pepe</td>
+                <td>Gotera</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Otilio</td>
+                <td>Chapuzas</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Mortadelo</td>
+                <td>Disfrazado</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Filemón</td>
+                <td>Jefe</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <br><br><br>
+    
+    
+    <h2>id</h2>
+    =
+    SQL:    INT          Unsigned    PK Autoincremental  NOT NULL
+    HTML:   type:"number"   min=1                           required
+    <input type="number" name="id_agencia" id="id_agencia" min="1" required>
+    
+    <br><br><br>
+    
+    <h2>Nombre</h2>
+    
+    SQL:    VARCHAR         30          NOT NULL
+    HTML:   type:"text"     maxlenght   required
+    <input type="text" name="nombreAgencia" id="nombreAgencia" maxlength="30"  required>
+    
+    <br><br><br>
+    
+    <h2>Teléfono</h2>
+    
+    SQL     VARCHAR         9           NOT NULL
+    HTML    type:"tel"                  required
+    <input type="tel" name="telefonoAgencia" id="telefonoAgencia">
+    
+    <br><br><br>
+    
+    
+    <h2>Fecha Nacimiento</h2>
+    
+    SQL     DATE    
+    HTML    type="date"     min
+    <input type="date" name="fechNac" id="fechNac" max="2005/03/01">
+    
+    <br><br><br>
+    
+    
+    <h2>Género</h2>
+    
+    <div class="genero">
+        
+        Género:
+        <select name="genero" id="genero">
+            <option value="V">Varón</option>
+            <option value="H">Hembra</option>
+            <option value="N">NS/NC</option>
+        </select>
+        
+        <br><br><br>
+        
+        <fieldset >
+            <legend>Género</legend>
+
+            <input type="radio" name="genero" id="genero_v" value="V"> Varón <br>
+            <input type="radio" name="genero" id="genero_h" value="H"> Hembra <br>
+            <input type="radio" name="genero" id="genero_n" value="N"> NS/NC <br>
+        </fieldset>
+        
+    </div>
+    
+    <h2>Vía Comunicación</h2>
+    <div class="comunicacion">
+        
+        <input type="checkbox" name="email" id="email"> Email
+        <br>
+        <input type="checkbox" name="Whatsapp" id="Whatsapp"> Whatsapp
+        
+    </div>
+    
+    <br><br><br>
+
+
+
+    <h2>Mapa de Google</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3035.2121213089526!2d-3.6402680393222204!3d40.47057202123142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1677701254818!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+</body>
+</html>
